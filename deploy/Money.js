@@ -7,6 +7,7 @@ module.exports = async function (hre) {
   const { deploy } = deployments
 
   const { deployer } = await getNamedAccounts()
+  console.log('deployer:',deployer)
 
   const moneyToken  = await deploy("MoneyToken", {
     from: deployer,
